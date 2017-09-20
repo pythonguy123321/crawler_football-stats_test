@@ -4,10 +4,10 @@ browser = webdriver.Chrome(executable_path='./webdrivers/chromedriver')
 browser.implicitly_wait(15)
 browser.get('https://www.rezultati.com/')
 
-def update_feed():
-    field_utakmice = browser.find_element_by_id('fs')
-    tables = field_utakmice.find_elements_by_class_name('soccer')
+field_utakmice = browser.find_element_by_id('fs')
+tables = field_utakmice.find_elements_by_class_name('soccer')
 
+def update_feed():
     for table in tables:
         thead = table.find_element_by_tag_name('thead')
         text = thead.text.split('\n')
