@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# chromium log files
+debug.log
